@@ -8,6 +8,8 @@ const test = (() => {
   (async () => {
     try {
 
+      // const result = await client.request(ServerAPI.stopInstance(String(process.env.INSTANCE_ID)))
+      // const result = await client.request(ServerAPI.startInstance(String(process.env.INSTANCE_ID)))
       const result = await client.request(ServerAPI.describeInstance(String(process.env.INSTANCE_ID)))
       console.log(result)
     } catch(error) {

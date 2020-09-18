@@ -53,7 +53,6 @@ class Client {
         }
 
         let response = await res.text()
-
         const mainFormatter = config.transformResponse || (_res => _res)
         return new Result<T>(
           res.status,

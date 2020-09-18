@@ -41,3 +41,43 @@ export class Server {
     this.description = String(item.description)
   }
 }
+
+export class StartInstanceResponse {
+  readonly instanceId: string
+  readonly instanceUniqueId: string
+  readonly currentState: IInstanceState
+  readonly previousState: IInstanceState
+
+  constructor(item: any) {
+    this.instanceId = String(item.instanceId)
+    this.instanceUniqueId = String(item.instanceUniqueId)
+    this.currentState = {
+      code: Number(item.currentState.code),
+      name: String(item.currentState.name),
+    }
+    this.previousState = {
+      code: Number(item.previousState.code),
+      name: String(item.previousState.name),
+    }
+  }
+}
+
+export class StopInstanceResponse {
+  readonly instanceId: string
+  readonly instanceUniqueId: string
+  readonly currentState: IInstanceState
+  readonly previousState: IInstanceState
+
+  constructor(item: any) {
+    this.instanceId = String(item.instanceId)
+    this.instanceUniqueId = String(item.instanceUniqueId)
+    this.currentState = {
+      code: Number(item.currentState.code),
+      name: String(item.currentState.name),
+    }
+    this.previousState = {
+      code: Number(item.previousState.code),
+      name: String(item.previousState.name),
+    }
+  }
+}
