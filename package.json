@@ -1,8 +1,10 @@
 {
   "name": "nifcloud_js",
   "version": "1.0.0",
+  "author": "Kaz Watanabe",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "start": "yarn run build:live",
     "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/test.ts"
   },
